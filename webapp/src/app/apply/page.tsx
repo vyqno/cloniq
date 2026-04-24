@@ -1,6 +1,6 @@
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
-import { ButtonLink } from "@/components/ui/ButtonLink";
+import { ApplicationForm } from "@/components/applications/ApplicationForm";
 
 export default function ApplyPage() {
   return (
@@ -17,16 +17,7 @@ export default function ApplyPage() {
           Serious capabilities require review. Tell Cloniq what you want to build as a creator,
           business, developer, advertiser, publisher, or multi-role operator.
         </p>
-        <div className="mt-8 rounded-[var(--radius)] border border-[var(--border)] bg-white p-6 shadow-sm">
-          <h2 className="text-xl font-semibold">Phase 2 will activate real submissions</h2>
-          <p className="mt-3 text-sm leading-6 text-[var(--muted)]">
-            The first implementation phase establishes the public shell. The next phase adds
-            thirdweb auth, application forms, admin review, and workspace activation.
-          </p>
-          <div className="mt-6">
-            <ButtonLink href="/">Return home</ButtonLink>
-          </div>
-        </div>
+        <ApplicationForm />
       </main>
       <Footer />
     </>
