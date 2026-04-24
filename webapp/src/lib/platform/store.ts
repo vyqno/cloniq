@@ -2,12 +2,17 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { initialPlatformState } from "./seed";
 import type {
+  AgentListing,
   AgentInput,
   CampaignInput,
+  Campaign,
   DeveloperKeyInput,
+  DeveloperKey,
   MeetingInput,
+  MeetingSession,
   PlatformState,
   WorkflowInput,
+  WorkflowTemplate,
 } from "./types";
 
 const dataDir = path.join(process.cwd(), ".data");
@@ -49,7 +54,7 @@ export async function updatePlatformState(mutator: (state: PlatformState) => Pla
   return nextState;
 }
 
-export function createAgent(state: PlatformState, input: AgentInput) {
+export function createAgent(state: PlatformState, input: AgentInput): AgentListing {
   return {
     id: idFor("agent", input.name),
     slug: slugify(input.name),
@@ -59,13 +64,13 @@ export function createAgent(state: PlatformState, input: AgentInput) {
     creator: "Pending creator",
     priceLabel: input.priceLabel,
     languages: ["English"],
-    modalities: ["chat", "api"] as const,
+    modalities: ["chat", "api"],
     trustTier: "review" as const,
     status: "review" as const,
   };
 }
 
-export function createWorkflow(state: PlatformState, input: WorkflowInput) {
+export function createWorkflow(state: PlatformState, input: WorkflowInput): WorkflowTemplate {
   return {
     id: idFor("workflow", input.name),
     name: input.name,
@@ -76,7 +81,7 @@ export function createWorkflow(state: PlatformState, input: WorkflowInput) {
   };
 }
 
-export function createDeveloperKey(state: PlatformState, input: DeveloperKeyInput) {
+export function createDeveloperKey(state: PlatformState, input: DeveloperKeyInput): DeveloperKey {
   return {
     id: idFor("key", input.label),
     label: input.label,
@@ -87,7 +92,7 @@ export function createDeveloperKey(state: PlatformState, input: DeveloperKeyInpu
   };
 }
 
-export function createMeeting(state: PlatformState, input: MeetingInput) {
+export function createMeeting(state: PlatformState, input: MeetingInput): MeetingSession {
   return {
     id: idFor("meeting", input.title),
     title: input.title,
@@ -98,7 +103,7 @@ export function createMeeting(state: PlatformState, input: MeetingInput) {
   };
 }
 
-export function createCampaign(state: PlatformState, input: CampaignInput) {
+export function createCampaign(state: PlatformState, input: CampaignInput): Campaign {
   return {
     id: idFor("campaign", input.name),
     name: input.name,
