@@ -1,5 +1,6 @@
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
+import { ButtonLink } from "@/components/ui/ButtonLink";
 
 export default function CreatorsPage() {
   return (
@@ -11,6 +12,9 @@ export default function CreatorsPage() {
           Build AI clones from your knowledge, sell paid chat, offer meetings, expose APIs, and
           track earnings after approval.
         </p>
+        <div className="mt-8">
+          <ButtonLink href="/studio">Open creator studio</ButtonLink>
+        </div>
       </main>
       <Footer />
     </>
