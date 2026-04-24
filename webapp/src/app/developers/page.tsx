@@ -1,5 +1,6 @@
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
+import { ButtonLink } from "@/components/ui/ButtonLink";
 
 export default function DevelopersPage() {
   return (
@@ -11,6 +12,9 @@ export default function DevelopersPage() {
           Integrate Cloniq agents through API keys, MCP, SDKs, rate limits, usage logs, and metered
           billing.
         </p>
+        <div className="mt-8">
+          <ButtonLink href="/developers/keys">Open key console</ButtonLink>
+        </div>
       </main>
       <Footer />
     </>

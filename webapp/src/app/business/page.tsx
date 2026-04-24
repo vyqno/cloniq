@@ -1,5 +1,6 @@
 import { Footer } from "@/components/site/Footer";
 import { Header } from "@/components/site/Header";
+import { ButtonLink } from "@/components/ui/ButtonLink";
 
 export default function BusinessPage() {
   return (
@@ -11,6 +12,9 @@ export default function BusinessPage() {
           Use managed setup or no-code workflows to operate AI agents for support, sales, calls, and
           internal operations.
         </p>
+        <div className="mt-8">
+          <ButtonLink href="/business/workflows">Open workflow builder</ButtonLink>
+        </div>
       </main>
       <Footer />
     </>
