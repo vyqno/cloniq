@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { WalletConnect } from "@/components/site/WalletConnect";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 
 const links = [
@@ -23,7 +24,10 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <ButtonLink href="/apply">Apply for access</ButtonLink>
+        <div className="flex items-center gap-3">
+          <WalletConnect />
+          <ButtonLink href="/apply">Apply for access</ButtonLink>
+        </div>
       </div>
     </header>
   );

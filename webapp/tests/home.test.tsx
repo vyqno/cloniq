@@ -1,10 +1,15 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 import Home from "@/app/page";
+import { Providers } from "@/components/providers/Providers";
 
 describe("Home page", () => {
   it("renders the Cloniq platform shell", () => {
-    render(<Home />);
+    render(
+      <Providers>
+        <Home />
+      </Providers>,
+    );
 
     expect(
       screen.getByRole("heading", { name: /build, verify, and monetize ai workforces/i }),
