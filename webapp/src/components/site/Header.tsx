@@ -4,10 +4,13 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 
 const links = [
   { href: "/marketplace", label: "Marketplace" },
+  { href: "/studio", label: "Studio" },
   { href: "/business", label: "Business" },
-  { href: "/creators", label: "Creators" },
   { href: "/developers", label: "Developers" },
+  { href: "/meetings", label: "Meetings" },
+  { href: "/billing", label: "Billing" },
   { href: "/ads", label: "Ads" },
+  { href: "/trust", label: "Trust" },
 ];
 
 export function Header() {

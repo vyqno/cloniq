@@ -17,5 +17,6 @@ describe("Home page", () => {
     expect(screen.getAllByRole("link", { name: /apply for access/i }).length).toBeGreaterThan(0);
     expect(screen.getByText(/real onboarding before serious access/i)).toBeInTheDocument();
     expect(screen.getByText(/one account, multiple approved workspaces/i)).toBeInTheDocument();
+    expect(screen.getByText(/onchain expansion/i)).toBeInTheDocument();
   });
 });

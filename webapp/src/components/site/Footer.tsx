@@ -3,8 +3,13 @@ import Link from "next/link";
 const footerLinks = [
   { href: "/apply", label: "Apply" },
   { href: "/marketplace", label: "Marketplace" },
-  { href: "/business", label: "Business" },
-  { href: "/developers", label: "Developers" },
+  { href: "/studio", label: "Studio" },
+  { href: "/business/workflows", label: "Workflows" },
+  { href: "/developers/keys", label: "API keys" },
+  { href: "/meetings", label: "Meetings" },
+  { href: "/billing", label: "Billing" },
+  { href: "/trust", label: "Trust" },
+  { href: "/onchain", label: "Onchain" },
 ];
 
 export function Footer() {

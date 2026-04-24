@@ -127,8 +127,32 @@ export const roadmapPhases: RoadmapPhase[] = [
   },
   {
     phase: "05",
-    title: "Ecosystem Rails",
-    description:
-      "Developer API/MCP, meeting avatars, payments, ads, rewards, compliance, and onchain expansion.",
+    title: "Developer Platform",
+    description: "API keys, MCP server readiness, usage metering, rate limits, and integration docs.",
+  },
+  {
+    phase: "06",
+    title: "Meetings and Voice",
+    description: "Pika-style avatars, meeting sessions, voice setup, transcripts, and notes readiness.",
+  },
+  {
+    phase: "07",
+    title: "Payments and Monetization",
+    description: "Balances, usage billing, creator plans, business plans, and payout review state.",
+  },
+  {
+    phase: "08",
+    title: "Ads and Rewards",
+    description: "Campaign review, sponsored placements, publisher rewards, and attention tracking.",
+  },
+  {
+    phase: "09",
+    title: "Trust and Compliance",
+    description: "KYC/KYB readiness, moderation queues, risk scoring, disputes, and audit logs.",
+  },
+  {
+    phase: "10",
+    title: "Onchain Expansion",
+    description: "Base registry readiness, escrow contracts, revenue splits, and reputation attestations.",
   },
 ];
